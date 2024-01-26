@@ -1,0 +1,58 @@
+.app-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-header {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
+}
+
+.app-main {
+  margin-top: 20px;
+}
+
+.get-joke-btn {
+  background-color: #61dafb;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.joke {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.app-footer {
+  margin-top: 20px;
+  color: #888;
+}
+/* Add this at the end of your App.css file */
+
+.get-joke-btn[disabled]::after {
+  content: "";
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
